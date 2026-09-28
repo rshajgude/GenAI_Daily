@@ -11,4 +11,6 @@ wheels/
 .DS_Store
 *.pdf
 
-job_desc.md
+job_desc
+.md
+.env
