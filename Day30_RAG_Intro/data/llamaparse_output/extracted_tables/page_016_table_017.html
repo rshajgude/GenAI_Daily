@@ -3,7 +3,7 @@
     <tr>
         <th>Clause Group</th>
         <th>Obligation</th>
-        <th>Responsible Team</th>
+        <th colspan="2">Responsible Team</th>
         <th>Trigger</th>
         <th>Evidence Required</th>
         <th>Risk</th>
@@ -11,49 +11,79 @@
   </thead>
   <tbody>
     <tr>
-        <td rowspan="2">Data Protection</td>
-        <td>Delete client data after contract termination unless retention is legally required.</td>
-        <td><strong>Owner</strong> Compliance<br /><strong>Backup</strong> Legal</td>
-        <td>Termination notice received</td>
-        <td>Deletion certificate + audit log export</td>
-        <td>High</td>
+        <td rowspan="4">Data Protection</td>
+        <td rowspan="2">Delete client data after contract termination unless retention is legally required.</td>
+        <td>Owner</td>
+        <td>Compliance</td>
+        <td rowspan="2">Termination notice received</td>
+        <td rowspan="2">Deletion certificate + audit log export</td>
+        <td rowspan="2">High</td>
     </tr>
     <tr>
-        <td>Notify client about any confirmed data incident within 72 hours.</td>
-        <td><strong>Owner</strong> Security<br /><strong>Backup</strong> DPO</td>
-        <td>Incident classified as confirmed breach</td>
-        <td>Incident report, timeline, notification proof</td>
-        <td>Critical</td>
+        <td>Backup</td>
+        <td>Legal</td>
     </tr>
     <tr>
-        <td rowspan="2">Billing</td>
-        <td>Apply annual platform fee adjustment only after renewal confirmation.</td>
-        <td><strong>Owner</strong> Finance<br /><strong>Backup</strong> CSM</td>
-        <td>Renewal order approved</td>
-        <td>Approved renewal sheet + invoice draft</td>
-        <td>Medium</td>
+        <td rowspan="2">Notify client about any confirmed data incident within 72 hours.</td>
+        <td>Owner</td>
+        <td>Security</td>
+        <td rowspan="2">Incident classified as confirmed breach</td>
+        <td rowspan="2">Incident report, timeline, notification proof</td>
+        <td rowspan="2">Critical</td>
     </tr>
     <tr>
-        <td>Do not bill inactive campuses during suspension period.</td>
-        <td><strong>Owner</strong> Revenue Ops<br /><strong>Backup</strong> Finance</td>
-        <td>Campus status = suspended</td>
-        <td>ERP campus status export</td>
-        <td>High</td>
+        <td>Backup</td>
+        <td>DPO</td>
     </tr>
     <tr>
-        <td rowspan="2">Support</td>
-        <td>Provide P1 response within 30 minutes during school operating hours.</td>
-        <td><strong>Owner</strong> Support L2<br /><strong>Backup</strong> Ops Manager</td>
-        <td>Ticket priority = P1</td>
-        <td>Ticket timestamps + agent assignment log</td>
-        <td>High</td>
+        <td rowspan="4">Billing</td>
+        <td rowspan="2">Apply annual platform fee adjustment only after renewal confirmation.</td>
+        <td>Owner</td>
+        <td>Finance</td>
+        <td rowspan="2">Renewal order approved</td>
+        <td rowspan="2">Approved renewal sheet + invoice draft</td>
+        <td rowspan="2">Medium</td>
     </tr>
     <tr>
-        <td>Escalate unresolved P2 tickets after 4 business hours.</td>
-        <td><strong>Owner</strong> Support L1<br /><strong>Backup</strong> Support L2</td>
-        <td>Ticket age > 4 business hours</td>
-        <td>Escalation log</td>
-        <td>Medium</td>
+        <td>Backup</td>
+        <td>CSM</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Do not bill inactive campuses during suspension period.</td>
+        <td>Owner</td>
+        <td>Revenue Ops</td>
+        <td rowspan="2">Campus status = suspended</td>
+        <td rowspan="2">ERP campus status export</td>
+        <td rowspan="2">High</td>
+    </tr>
+    <tr>
+        <td>Backup</td>
+        <td>Finance</td>
+    </tr>
+    <tr>
+        <td rowspan="4">Support</td>
+        <td rowspan="2">Provide P1 response within 30 minutes during school operating hours.</td>
+        <td>Owner</td>
+        <td>Support L2</td>
+        <td rowspan="2">Ticket priority = P1</td>
+        <td rowspan="2">Ticket timestamps + agent assignment log</td>
+        <td rowspan="2">High</td>
+    </tr>
+    <tr>
+        <td>Backup</td>
+        <td>Ops Manager</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Escalate unresolved P2 tickets after 4 business hours.</td>
+        <td>Owner</td>
+        <td>Support L1</td>
+        <td rowspan="2">Ticket age > 4 business hours</td>
+        <td rowspan="2">Escalation log</td>
+        <td rowspan="2">Medium</td>
+    </tr>
+    <tr>
+        <td>Backup</td>
+        <td>Support L2</td>
     </tr>
   </tbody>
 </table>

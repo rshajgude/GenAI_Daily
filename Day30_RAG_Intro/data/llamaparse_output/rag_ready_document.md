@@ -42,14 +42,12 @@ This PDF is intentionally designed to test document loaders, PDF parsers, OCR wo
   </tbody>
 </table>
 
-Complex RAG Parsing Sample - synthetic document
-
-Page 1
+Complex RAG Parsing Sample - synthetic document Page 1
 
 
 ---
 
-# 1. Business Scenario
+## 1. Business Scenario
 
 The platform team is building a document intelligence layer for contract operations. Legal users need answers such as: Which contracts renew automatically? Which agreements have a 60-day termination notice? Which documents mention data residency in India? These questions require retrieval across multiple document types and sometimes across multiple related documents of a single client.
 
@@ -90,15 +88,22 @@ Support teams also want answers from SOPs, markdown runbooks, HTML exports, chat
   </tbody>
 </table>
 
-## Contract Processing Ownership Map
+Contract Processing Ownership Map
 
 ```mermaid
 graph TD
-    LegalOps[Legal Ops] --> ClientAdmin[Client Admin]
-    LegalOps --> RAGService[RAG Service]
-    LegalOps --> AuditTeam[Audit Team]
-    RAGService --> VectorDB[Vector DB]
-    RAGService --> DocumentStore[Document Store]
+    LegalOps["Legal Ops"]
+    ClientAdmin["Client Admin"]
+    RAGService["RAG Service"]
+    AuditTeam["Audit Team"]
+    VectorDB["Vector DB"]
+    DocumentStore["Document Store"]
+
+    LegalOps --- ClientAdmin
+    LegalOps --- RAGService
+    LegalOps --- AuditTeam
+    RAGService --- VectorDB
+    RAGService --- DocumentStore
 ```
 
 Caption: Ownership map showing how client admins, legal teams, audit teams, document storage, vector storage, and the RAG service interact.
@@ -110,7 +115,7 @@ Page 2
 
 ---
 
-# 2. Raw Data Inventory
+## 2. Raw Data Inventory
 
 The ingestion team receives files from multiple sources. Some files are clean and digital; others contain scanned pages, rotated tables, missing metadata, embedded images, or formula-generated values. The inventory below intentionally includes different formats and extraction expectations.
 
@@ -202,7 +207,7 @@ Page 3
 
 ---
 
-# 3. Contract Excerpt: Dense Legal Text
+## 3. Contract Excerpt: Dense Legal Text
 
 Clause 7.2 - Confidential Information. The Receiving Party shall protect Confidential Information using at least the same degree of care that it uses to protect its own confidential materials, but in no event less than reasonable care. Confidential Information includes technical documents, pricing schedules, user lists, API keys, operational procedures, security reports, incident response notes, product roadmaps, and any derived analysis prepared by the Receiving Party.
 
@@ -251,16 +256,14 @@ Clause 11.4 - Termination Assistance. Upon termination, the provider shall make 
   </tbody>
 </table>
 
-**Parser note: clause numbering is important. Chunking should not remove or split clause identifiers because users often ask questions using clause numbers.**
+<mark>Parser note: clause numbering is important. Chunking should not remove or split clause identifiers because users often ask questions using clause numbers.</mark>
 
-Complex RAG Parsing Sample - synthetic document
-
-Page 4
+Complex RAG Parsing Sample - synthetic document Page 4
 
 
 ---
 
-# 4. Simple Table: Policy Rules
+## 4. Simple Table: Policy Rules
 
 The following table is intentionally simple. It should be correctly extracted by most PDF table parsers. It tests basic row and column detection, short text values, and numeric values.
 
@@ -307,21 +310,18 @@ The following table is intentionally simple. It should be correctly extracted by
   </tbody>
 </table>
 
-## Narrative Around the Table
+### Narrative Around the Table
 
 This table appears between paragraphs, which is common in enterprise documents. A good parser should preserve the paragraph before the table, the table content, and the paragraph after the table in the correct reading order.
 
 For RAG systems, simple tables are often converted into row-wise text chunks such as: Policy Area: Refunds; Rule: Refund requests must be raised within 7 days; Owner: Customer Support.
 
-Complex RAG Parsing Sample - synthetic document
-
-Page 5
-5
+Complex RAG Parsing Sample - synthetic document Page 5
 
 
 ---
 
-# 5. Complex Table: SLA, Escalation, and Credits
+## 5. Complex Table: SLA, Escalation, and Credits
 
 This table uses long cells and operational footnotes. It is designed to test whether the parser can retain header hierarchy and map values to the correct columns.
 
@@ -339,42 +339,42 @@ This table uses long cells and operational footnotes. It is designed to test whe
   <tbody>
     <tr>
         <td>API Availability</td>
-<td>P1 - complete<br/>outage</td>
+<td>P1 - complete outage</td>
 <td>15 minutes</td>
 <td>4 hours</td>
-<td>10 percent monthly<br/>fee credit</td>
-<td>Monitoring logs and incident<br/>ticket</td>
+<td>10 percent monthly fee credit</td>
+<td>Monitoring logs and incident ticket</td>
     </tr>
 <tr>
         <td>API Availability</td>
-<td>P2 - degraded<br/>performance</td>
+<td>P2 - degraded performance</td>
 <td>30 minutes</td>
 <td>8 hours</td>
-<td>5 percent monthly fee<br/>credit</td>
-<td>Latency dashboard and<br/>affected endpoint list</td>
+<td>5 percent monthly fee credit</td>
+<td>Latency dashboard and affected endpoint list</td>
     </tr>
 <tr>
         <td>Data Pipeline</td>
-<td>P1 - ingestion<br/>stopped</td>
+<td>P1 - ingestion stopped</td>
 <td>20 minutes</td>
 <td>6 hours</td>
-<td>8 percent pipeline fee<br/>credit</td>
-<td>Queue depth, failed job IDs,<br/>replay report</td>
+<td>8 percent pipeline fee credit</td>
+<td>Queue depth, failed job IDs, replay report</td>
     </tr>
 <tr>
         <td>Data Pipeline</td>
-<td>P3 - delayed<br/>batch</td>
+<td>P3 - delayed batch</td>
 <td>4 hours</td>
 <td>Next business day</td>
 <td>No automatic credit</td>
-<td>Batch ID and SLA exception<br/>note</td>
+<td>Batch ID and SLA exception note</td>
     </tr>
 <tr>
         <td>Support</td>
-<td>P2 - urgent<br/>support</td>
+<td>P2 - urgent support</td>
 <td>1 hour</td>
 <td>1 business day</td>
-<td>2 percent support fee<br/>credit</td>
+<td>2 percent support fee credit</td>
 <td>Support ticket with timestamps</td>
     </tr>
   </tbody>
@@ -382,32 +382,30 @@ This table uses long cells and operational footnotes. It is designed to test whe
 
 Footnote A: Service credits are not cumulative across the same service category for the same calendar month. Footnote B: Credits do not apply when delay is caused by client-side network restrictions, missing credentials, or force majeure events.
 
-> Parser note: table footnotes should remain attached to the table. If the footnote is separated, an answer about credits may become incomplete or misleading.
+<mark>Parser note: table footnotes should remain attached to the table. If the footnote is separated, an answer about credits may become incomplete or misleading.</mark>
 
-Complex RAG Parsing Sample - synthetic document Page 6
+Complex RAG Parsing Sample - synthetic document
+
+Page 6
 
 
 ---
 
-# 6. Image: RAG Architecture Diagram
+## 6. Image: RAG Architecture Diagram
 
 The diagram below represents the ingestion and retrieval flow. Some PDF parsers ignore images completely, while others extract image metadata but not the text inside the image. For production use, image content may require OCR or multimodal extraction.
 
-## RAG Ingestion and Retrieval Flow
+### RAG Ingestion and Retrieval Flow
 
 ```mermaid
 graph LR
-    subgraph Ingestion
-    A[Raw FilesPDF / DOCX / HTML] --> B[ParserText + Tables]
-    B --> C[ChunksSections + Metadata]
-    C --> D[Vector DBEmbeddings]
-    end
-
-    subgraph Retrieval
-    E[User Queryquestion] --> B
-    D --> F[Retrievertop-k chunks]
-    F --> G[LLMgrounded answer]
-    end
+    RawFiles["Raw FilesPDF / DOCX / HTML"] --> Parser["ParserText + Tables"]
+    Parser --> Chunks["ChunksSections + Metadata"]
+    Chunks --> VectorDB["Vector DBEmbeddings"]
+    VectorDB --> LLM["LLMgrounded answer"]
+    UserQuery["User Queryquestion"] --> Retriever["Retrievertop-k chunks"]
+    Retriever --> LLM
+    UserQuery --> Parser
 ```
 
 Parsing challenge: each stage can improve or damage answer quality.
@@ -441,12 +439,14 @@ Caption: A simplified RAG pipeline showing raw files, parsing, chunking, embeddi
   </tbody>
 </table>
 
-Complex RAG Parsing Sample - synthetic document Page 7
+Complex RAG Parsing Sample - synthetic document
+
+Page 7
 
 
 ---
 
-# 7. Markdown Runbook Excerpt
+## 7. Markdown Runbook Excerpt
 
 Markdown files are often easier to parse because headings and code blocks are explicit. However, when markdown is exported to PDF, the structure may become visual rather than semantic.
 
@@ -495,14 +495,12 @@ A good parser should preserve code block boundaries and avoid mixing numbered st
   </tbody>
 </table>
 
-Complex RAG Parsing Sample - synthetic document
-
-Page 8
+Complex RAG Parsing Sample - synthetic document Page 8
 
 
 ---
 
-# 8. Scanned Form and OCR Challenge
+## 8. Scanned Form and OCR Challenge
 
 This page contains a scanned-form style image. Text inside the form is not normal selectable PDF text. A simple text parser may miss it entirely. OCR-based systems should extract labels, values, and checkboxes from the image.
 
@@ -550,14 +548,12 @@ Caption: The form includes fields such as Client Name, Contract ID, Effective Da
   </tbody>
 </table>
 
-Complex RAG Parsing Sample - synthetic document
-
-Page 9
+Complex RAG Parsing Sample - synthetic document Page 9
 
 
 ---
 
-# 9. Multiple Documents for One Client
+## 9. Multiple Documents for One Client
 
 BlueLeaf Retail has five related contract documents. If these documents are indexed independently without relationship metadata, the retriever may miss cross-document context. The platform uses a `contract_group_id` to connect related documents.
 
@@ -621,7 +617,7 @@ Page 10
 
 ---
 
-# 10. Multi-tenant Retrieval and Access Control
+## 10. Multi-tenant Retrieval and Access Control
 
 In a multi-tenant RAG system, each document, chunk, embedding, and retrieval request should be associated with a tenant identifier. Client isolation should happen before the LLM receives any context.
 
@@ -669,12 +665,11 @@ Wrong flow: retrieve from all clients and tell the model to ignore unauthorized 
 Complex RAG Parsing Sample - synthetic document
 
 Page 11
-11
 
 
 ---
 
-# 11. Analytics Image: Retention Heatmap
+## 11. Analytics Image: Retention Heatmap
 
 The heatmap below simulates viewership retention by time slot. A parser that ignores chart images will miss useful business context. OCR can extract axis labels and numbers, but chart understanding may require a vision model.
 
@@ -683,7 +678,7 @@ Viewer Retention Heatmap by Time Slot
 <table>
   <thead>
     <tr>
-        <th>Time Slot</th>
+        <th> </th>
         <th>Mon</th>
         <th>Tue</th>
         <th>Wed</th>
@@ -771,7 +766,7 @@ Page 12
 
 ---
 
-# 12. Evaluation Dataset
+## 12. Evaluation Dataset
 
 A RAG system should be evaluated separately for retrieval quality and answer quality. This page includes a miniature evaluation set with expected source references. It is useful for testing whether citations point to the correct section.
 
@@ -833,7 +828,7 @@ Page 13
 
 ---
 
-# 13. Edge Cases for Parsers
+## 13. Edge Cases for Parsers
 
 The following cases often break real document ingestion pipelines. They are included here as guidance for testing parser quality before moving to embeddings and vector storage.
 
@@ -884,14 +879,14 @@ The following cases often break real document ingestion pipelines. They are incl
   </tbody>
 </table>
 
-**Bad parsing creates bad chunks. Bad chunks create bad retrieval. Bad retrieval creates bad answers.**
+<mark>**Bad parsing creates bad chunks. Bad chunks create bad retrieval. Bad retrieval creates bad answers.**</mark>
 
 Complex RAG Parsing Sample - synthetic document Page 14
 
 
 ---
 
-# 15. Final Ingestion Checklist
+## 15. Final Ingestion Checklist
 
 Use this checklist before sending parsed content into chunking and embeddings. It helps identify whether the data is ready for production RAG.
 
@@ -944,20 +939,18 @@ Use this checklist before sending parsed content into chunking and embeddings. I
 
 Summary: RAG is about knowledge access. Fine-tuning is about behavior adaptation. For document intelligence, parsing quality is the foundation. If extraction is weak, no embedding model or LLM can fully fix the missing context.
 
-End of synthetic 15-page parsing test document.
+<mark>End of synthetic 15-page parsing test document.</mark>
 
-Complex RAG Parsing Sample - synthetic document
-
-Page 15
+Complex RAG Parsing Sample - synthetic document Page 15
 
 
 ---
 
-# Appendix A: Complex Clause Responsibility Matrix
+## Appendix A: Complex Clause Responsibility Matrix
 
 Grouped clauses with owner/backup split inside the same responsibility cell. This page is useful for testing row grouping, merged-looking labels, split responsibility cells, and long evidence text.
 
-**Parsing challenge**: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around the table.
+Parsing challenge: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around the table.
 
 and a split responsibility cell where owner and backup are shown inside the same row.
 
@@ -966,7 +959,7 @@ and a split responsibility cell where owner and backup are shown inside the same
     <tr>
         <th>Clause Group</th>
         <th>Obligation</th>
-        <th>Responsible Team</th>
+        <th colspan="2">Responsible Team</th>
         <th>Trigger</th>
         <th>Evidence Required</th>
         <th>Risk</th>
@@ -974,49 +967,79 @@ and a split responsibility cell where owner and backup are shown inside the same
   </thead>
   <tbody>
     <tr>
-        <td rowspan="2">Data Protection</td>
-<td>Delete client data after contract termination unless retention is legally required.</td>
-<td><strong>Owner</strong> Compliance<br/><strong>Backup</strong> Legal</td>
-<td>Termination notice received</td>
-<td>Deletion certificate + audit log export</td>
-<td>High</td>
+        <td rowspan="4">Data Protection</td>
+        <td rowspan="2">Delete client data after contract termination unless retention is legally required.</td>
+<td>Owner</td>
+<td>Compliance</td>
+        <td rowspan="2">Termination notice received</td>
+        <td rowspan="2">Deletion certificate + audit log export</td>
+        <td rowspan="2">High</td>
     </tr>
 <tr>
-        <td>Notify client about any confirmed data incident within 72 hours.</td>
-<td><strong>Owner</strong> Security<br/><strong>Backup</strong> DPO</td>
-<td>Incident classified as confirmed breach</td>
-<td>Incident report, timeline, notification proof</td>
-<td>Critical</td>
+        <td>Backup</td>
+<td>Legal</td>
     </tr>
 <tr>
-        <td rowspan="2">Billing</td>
-<td>Apply annual platform fee adjustment only after renewal confirmation.</td>
-<td><strong>Owner</strong> Finance<br/><strong>Backup</strong> CSM</td>
-<td>Renewal order approved</td>
-<td>Approved renewal sheet + invoice draft</td>
-<td>Medium</td>
+        <td rowspan="2">Notify client about any confirmed data incident within 72 hours.</td>
+<td>Owner</td>
+<td>Security</td>
+        <td rowspan="2">Incident classified as confirmed breach</td>
+        <td rowspan="2">Incident report, timeline, notification proof</td>
+        <td rowspan="2">Critical</td>
     </tr>
 <tr>
-        <td>Do not bill inactive campuses during suspension period.</td>
-<td><strong>Owner</strong> Revenue Ops<br/><strong>Backup</strong> Finance</td>
-<td>Campus status = suspended</td>
-<td>ERP campus status export</td>
-<td>High</td>
+        <td>Backup</td>
+<td>DPO</td>
     </tr>
 <tr>
-        <td rowspan="2">Support</td>
-<td>Provide P1 response within 30 minutes during school operating hours.</td>
-<td><strong>Owner</strong> Support L2<br/><strong>Backup</strong> Ops Manager</td>
-<td>Ticket priority = P1</td>
-<td>Ticket timestamps + agent assignment log</td>
-<td>High</td>
+        <td rowspan="4">Billing</td>
+        <td rowspan="2">Apply annual platform fee adjustment only after renewal confirmation.</td>
+<td>Owner</td>
+<td>Finance</td>
+        <td rowspan="2">Renewal order approved</td>
+        <td rowspan="2">Approved renewal sheet + invoice draft</td>
+        <td rowspan="2">Medium</td>
     </tr>
 <tr>
-        <td>Escalate unresolved P2 tickets after 4 business hours.</td>
-<td><strong>Owner</strong> Support L1<br/><strong>Backup</strong> Support L2</td>
-<td>Ticket age &gt; 4 business hours</td>
-<td>Escalation log</td>
-<td>Medium</td>
+        <td>Backup</td>
+<td>CSM</td>
+    </tr>
+<tr>
+        <td rowspan="2">Do not bill inactive campuses during suspension period.</td>
+<td>Owner</td>
+<td>Revenue Ops</td>
+        <td rowspan="2">Campus status = suspended</td>
+        <td rowspan="2">ERP campus status export</td>
+        <td rowspan="2">High</td>
+    </tr>
+<tr>
+        <td>Backup</td>
+<td>Finance</td>
+    </tr>
+<tr>
+        <td rowspan="4">Support</td>
+        <td rowspan="2">Provide P1 response within 30 minutes during school operating hours.</td>
+<td>Owner</td>
+<td>Support L2</td>
+        <td rowspan="2">Ticket priority = P1</td>
+        <td rowspan="2">Ticket timestamps + agent assignment log</td>
+        <td rowspan="2">High</td>
+    </tr>
+<tr>
+        <td>Backup</td>
+<td>Ops Manager</td>
+    </tr>
+<tr>
+        <td rowspan="2">Escalate unresolved P2 tickets after 4 business hours.</td>
+<td>Owner</td>
+<td>Support L1</td>
+        <td rowspan="2">Ticket age > 4 business hours</td>
+        <td rowspan="2">Escalation log</td>
+        <td rowspan="2">Medium</td>
+    </tr>
+<tr>
+        <td>Backup</td>
+<td>Support L2</td>
     </tr>
   </tbody>
 </table>
@@ -1026,12 +1049,11 @@ Table 1: Added as complex parsing appendix for table extraction, OCR fallback, a
 Complex RAG Parsing Sample - appended complex tables
 
 Appendix page 1
-1
 
 
 ---
 
-# Appendix B: Regional Pricing and Usage Add-on Matrix
+## Appendix B: Regional Pricing and Usage Add-on Matrix
 
 Pricing table with multi-level headers, regional columns, add-on columns, billing rules, exception rows, and mixed numeric/text values.
 
@@ -1057,7 +1079,7 @@ Pricing table with multi-level headers, regional columns, add-on columns, billin
     <tr>
         <td>Starter</td>
 <td>0 - 2,000 students</td>
-<td><strong>Base</strong> INR 4.5L<br/><strong>Support</strong> INR 60K</td>
+<td><strong>Base</strong> INR 4.5L<br /><strong>Support</strong> INR 60K</td>
 <td>USD 7,200</td>
 <td>INR 0.18/message</td>
 <td>INR 0.42/message</td>
@@ -1066,16 +1088,16 @@ Pricing table with multi-level headers, regional columns, add-on columns, billin
 <tr>
         <td>Growth</td>
 <td>2,001 - 10,000 students</td>
-<td><strong>Base</strong> INR 11L<br/><strong>Support</strong> INR 1.4L</td>
+<td><strong>Base</strong> INR 11L<br /><strong>Support</strong> INR 1.4L</td>
 <td>USD 18,000</td>
 <td>INR 0.15/message</td>
 <td>INR 0.38/message</td>
-<td>50% advance + monthly usage</td>
+<td>50% advance +<br />monthly usage</td>
     </tr>
 <tr>
         <td>Enterprise</td>
 <td>10,001+ students</td>
-<td><strong>Base</strong> Custom<br/><strong>Support</strong> Included</td>
+<td><strong>Base</strong> Custom<br /><strong>Support</strong> Included</td>
 <td>Custom</td>
 <td>Negotiated</td>
 <td>Negotiated</td>
@@ -1098,14 +1120,13 @@ Complex RAG Parsing Sample - appended complex tables
 Appendix page 2
 
 
-
 ---
 
 # Appendix C: Invoice Line Items with Tax Split
 
 Invoice-style line item table with item groups, quantity, rate, CGST/SGST split, totals, and summary row. Useful for invoice parsing and tax extraction tests.
 
-**Parsing challenge**: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around the table.
+Parsing challenge: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around the table.
 
 <table>
   <thead>
@@ -1125,7 +1146,7 @@ Invoice-style line item table with item groups, quantity, rate, CGST/SGST split,
   <tbody>
     <tr>
         <td rowspan="2">ERP Platform</td>
-<td>Annual School360 Enterprise Subscription -<br/>12 campuses</td>
+<td>Annual School360 Enterprise Subscription - 12 campuses</td>
 <td>1</td>
 <td>INR 11,00,000</td>
 <td>9%</td>
@@ -1133,7 +1154,7 @@ Invoice-style line item table with item groups, quantity, rate, CGST/SGST split,
 <td>INR 12,98,000</td>
     </tr>
 <tr>
-        <td>Parent communication add-on - estimated<br/>message pack</td>
+        <td>Parent communication add-on - estimated message pack</td>
 <td>2,00,000 msgs</td>
 <td>INR 0.36/msg</td>
 <td>9%</td>
@@ -1152,7 +1173,7 @@ Invoice-style line item table with item groups, quantity, rate, CGST/SGST split,
 <tr>
         <td>Summary</td>
 <td>Subtotal and taxes</td>
-<td>\*</td>
+<td>*</td>
 <td>INR 14,16,000</td>
 <td>INR 1,27,440</td>
 <td>INR 1,27,440</td>
@@ -1163,10 +1184,7 @@ Invoice-style line item table with item groups, quantity, rate, CGST/SGST split,
 
 Table 3: Added as complex parsing appendix for table extraction, OCR fallback, and layout-aware RAG testing.
 
-Complex RAG Parsing Sample - appended complex tables
-
-Appendix page 3
-3
+Complex RAG Parsing Sample - appended complex tables Appendix page 3
 
 
 ---
@@ -1177,17 +1195,17 @@ Diagram-style image showing how PDFs, DOCX files, scanned invoices, Excel/CSV me
 
 <mark>**Parsing challenge:** image text, arrows, labels, and captions may not appear in normal PDF text extraction. OCR or multimodal parsing may be required.</mark>
 
-## Visual Appendix 1: Multimodal Document Flow
+### Visual Appendix 1: Multimodal Document Flow
 
 Parsing challenge: preserve text, tables, images, OCR output, and metadata before chunking.
 
 ```mermaid
 graph LR
-    A[PDF / DOCXContracts] --> D[Parser+ OCR]
-    B[ScannedInvoices] --> D
-    C[Excel / CSVMetadata] --> D
-    D --> E[Text + Tables+ Metadata]
-    E --> F[RAG-readyChunks]
+    A["PDF / DOCXContracts"] --> D
+    B["ScannedInvoices"] --> D
+    C["Excel / CSVMetadata"] --> D
+    D["Parser+ OCR"] --> E["Text + Tables+ Metadata"]
+    E --> F["RAG-readyChunks"]
 ```
 
 <mark>Expected extraction: content blocks with source file, page, section, modality, and confidence score.</mark>
@@ -1197,7 +1215,6 @@ Added at the end for complex image parsing, OCR fallback, layout-aware extractio
 Complex RAG Parsing Sample - appended visuals and scanned documents
 
 Appendix page 1
-1
 
 
 ---
@@ -1208,21 +1225,18 @@ Dashboard-style image containing a bar chart, legend, and small matrix. Useful f
 
 <mark>**Parsing challenge:** extract chart title, bar values, legend labels, and table values from an embedded image.</mark>
 
-# Visual Appendix 2: Contract Risk Dashboard Snapshot
+## Visual Appendix 2: Contract Risk Dashboard Snapshot
 
 Parsing challenge: extract chart labels, legends, values, and nearby explanatory text.
 
-Open Contract Risks by Month
+### Open Contract Risks by Month
 
 <table>
-  <thead>
     <tr>
-        <th>Month</th>
-        <th>Open Risks</th>
+        <td>Month</td>
+<td>Open Contract Risks</td>
     </tr>
-  </thead>
-  <tbody>
-    <tr>
+<tr>
         <td>Jan</td>
 <td>18</td>
     </tr>
@@ -1246,14 +1260,13 @@ Open Contract Risks by Month
         <td>Jun</td>
 <td>45</td>
     </tr>
-  </tbody>
 </table>
 
-* Red square icon High risk: 12 clauses
+icon: red square High risk: 12 clauses
 
-* Orange square icon Medium risk: 21 clauses
+icon: orange square Medium risk: 21 clauses
 
-* Green square icon Low risk: 45 clauses
+icon: green square Low risk: 45 clauses
 
 <table>
   <thead>
@@ -1293,7 +1306,6 @@ Added at the end for complex image parsing, OCR fallback, layout-aware extractio
 Complex RAG Parsing Sample - appended visuals and scanned documents
 
 Appendix page 2
-2
 
 
 ---
@@ -1310,28 +1322,22 @@ Parsing challenge: diagram text must be OCRed and mapped to relationships.
 
 ```mermaid
 graph LR
-    subgraph TenantSafeZone [ ]
+    subgraph TenantSafeZone [" "]
         direction TB
-        CU[Client Upload] --- SOS[Secure Object Store]
-        SOS --- IW[Ingestion Worker]
-        IW --> QR[Query Router]
-        VN[Vector Namespace]
-        
-        AS[Auth Service] --> QR
-        QR --> LG[LLM Gateway]
-        
-        %% Metadata badges
-        CU_meta[client_id] -.-> CU
-        SOS_meta[document_id] -.-> SOS
-        VN_meta[namespace] -.-> VN
-        AS_meta[role] -.-> AS
-        LG_meta[audit log] -.-> LG
+        subgraph Row1 [" "]
+            direction LR
+            CU["Client Upload(client_id)"] --- SOS["Secure Object Store(document_id)"] --- IW["Ingestion Worker"] --- VN["Vector Namespace(namespace)"]
+        end
+        subgraph Row2 [" "]
+            direction LR
+            AS["Auth Service(role)"] --> QR["Query Router"] --> LG["LLM Gateway(audit log)"]
+        end
+        IW --> QR
     end
-    
-    style TenantSafeZone fill:none,stroke:#B22222,stroke-width:2px
+    style TenantSafeZone fill:none,stroke:red,stroke-width:2px
 ```
 
-Red boundary = tenant-safe processing zone. Retrieval requires authenticated client_id before LLM context creation.
+Red boundary = tenant-safe processing zone. Rethink authenticated client_id before LLM context creation.
 
 Added at the end for complex image parsing, OCR fallback, layout-aware extraction, and multimodal RAG testing.
 
@@ -1347,23 +1353,22 @@ Appendix page 3
 
 Synthetic scanned tax invoice with vendor details, customer details, invoice number, GSTIN, line items, tax split, total amount, payment terms, footer notes, approval stamp, and handwritten-style receipt text.
 
-> <mark>**Parsing challenge:** this page is intentionally embedded as an image-like scan. A normal text parser may miss invoice values unless OCR is enabled.</mark>
+<mark>Parsing challenge: this page is intentionally embedded as an image-like scan. A normal text parser may miss invoice values unless OCR is enabled.</mark>
 
-# SCANNED TAX INVOICE
+## SCANNED TAX INVOICE
 
 **BlueLeaf Cloud Billing Services**
 No: INV-BLR-2026-0718
-
-GSTIN: 29AABCT2026P1Z8
 Date: 18 Jul 2026
 
-**Bill To:**
+**GSTIN**: 29AABCT2026P1Z8
 
+**Bill To:**
 School360 Learning Services Pvt Ltd
 Tower B, Outer Ring Road
 Bengaluru, Karnataka - 560103
 
-**Line Items**
+### Line Items
 
 <table>
   <thead>
@@ -1400,23 +1405,19 @@ Bengaluru, Karnataka - 560103
   </tbody>
 </table>
 
-**Subtotal:** INR 118,900
-
-**CGST 9%:** INR 10,701
-
-**SGST 9%:** INR 10,701
+**Subtotal**: INR 118,900
+**CGST 9%**: INR 10,701
+**SGST 9%**: INR 10,701
 
 **Total Amount: INR 140,302**
 
 **Payment Terms:**
-
 Due within 15 days. Late fee may apply after due date.
 
 Footer note: Amount includes taxes unless separately mentioned.
-
 OCR challenge: faint stamp, rotated page, table lines, and handwritten approval.
 
-APPROVED stamp
+stamp: APPROVED
 
 Received by: K. Mehta
 
@@ -1433,21 +1434,25 @@ Appendix page 4
 
 Synthetic scanned utility bill with meter-style charges, usage rows, tax values, total payable amount, payment terms, stamp, handwritten-style note, and noisy/rotated scan effects.
 
-<mark>Parsing challenge: extract bill number, issuer, line items, usage quantity, tax split, total payable, and payment notes from a scanned image.</mark>
+> Parsing challenge: extract bill number, issuer, line items, usage quantity, tax split, total payable, and payment notes from a scanned image.
 
-# SCANNED UTILITY BILL
+## SCANNED UTILITY BILL
 
-**CityRide Depot Energy Board** No: BILL-CRM-2026-0881
+CityRide Depot Energy Board
 
-GSTIN: 29AABCT2026P1Z8 Date: 18 Jul 2026
+**GSTIN**: 29AABCT2026P1Z8
 
-## Bill To:
+**No**: BILL-CRM-2026-0881
 
-School360 Learning Services Pvt Ltd
+**Date**: 18 Jul 2026
+
+### Bill To:
+
+School36o Learning Services Pvt Ltd
 Tower B, Outer Ring Road
 Bengaluru, Karnataka - 560103
 
-## Line Items
+### Line Items
 
 <table>
   <thead>
@@ -1491,13 +1496,15 @@ Bengaluru, Karnataka - 560103
   </tbody>
 </table>
 
-**Subtotal:** INR 10,278
-**CGST 9%:** INR 925
-**SGST 9%:** INR 925
+**Subtotal**: INR 10,278
 
-**Total Amount: INR 12,128**
+**CGST 9%**: INR 925
 
-## Payment Terms:
+**SGST 9%**: INR 925
+
+**Total Amount**: INR 12,128
+
+### Payment Terms:
 
 Due within 15 days. Late fee may apply after due date.
 
@@ -1505,7 +1512,7 @@ Footer note: Amount includes taxes unless separately mentioned.
 
 OCR challenge: faint stamp, rotated page, table lines, and handwritten approval.
 
-APPROVED stamp
+stamp: APPROVED
 
 Received by: K. Mehta
 
@@ -1514,7 +1521,6 @@ Added at the end for complex image parsing, OCR fallback, layout-aware extractio
 Complex RAG Parsing Sample - appended visuals and scanned documents
 
 Appendix page 5
-5
 
 
 ---
@@ -1523,7 +1529,7 @@ Appendix page 5
 
 This page adds a portrait-style image to test how a parser or multimodal RAG system handles photographic content, captions, image metadata, and surrounding text. Text-only loaders may extract the caption but cannot understand the visual content unless OCR, vision, or multimodal parsing is used.
 
-Portrait of a man with a beard and mustache, wearing a red and blue plaid shirt, standing with arms crossed against a solid yellow background.
+photograph: Portrait-style instructor image with a man in a red plaid shirt crossing his arms against a bright yellow background.
 
 **Caption:** Portrait-style instructor image with a bright background. Useful for testing image extraction, captioning, person detection, layout preservation, and multimodal document understanding.
 

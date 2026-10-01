@@ -257,48 +257,48 @@
       ],
       [
         "API Availability",
-        "P1 - complete<br/>outage",
+        "P1 - complete outage",
         "15 minutes",
         "4 hours",
-        "10 percent monthly<br/>fee credit",
-        "Monitoring logs and incident<br/>ticket"
+        "10 percent monthly fee credit",
+        "Monitoring logs and incident ticket"
       ],
       [
         "API Availability",
-        "P2 - degraded<br/>performance",
+        "P2 - degraded performance",
         "30 minutes",
         "8 hours",
-        "5 percent monthly fee<br/>credit",
-        "Latency dashboard and<br/>affected endpoint list"
+        "5 percent monthly fee credit",
+        "Latency dashboard and affected endpoint list"
       ],
       [
         "Data Pipeline",
-        "P1 - ingestion<br/>stopped",
+        "P1 - ingestion stopped",
         "20 minutes",
         "6 hours",
-        "8 percent pipeline fee<br/>credit",
-        "Queue depth, failed job IDs,<br/>replay report"
+        "8 percent pipeline fee credit",
+        "Queue depth, failed job IDs, replay report"
       ],
       [
         "Data Pipeline",
-        "P3 - delayed<br/>batch",
+        "P3 - delayed batch",
         "4 hours",
         "Next business day",
         "No automatic credit",
-        "Batch ID and SLA exception<br/>note"
+        "Batch ID and SLA exception note"
       ],
       [
         "Support",
-        "P2 - urgent<br/>support",
+        "P2 - urgent support",
         "1 hour",
         "1 business day",
-        "2 percent support fee<br/>credit",
+        "2 percent support fee credit",
         "Support ticket with timestamps"
       ]
     ],
-    "csv": "\"Service Category\",\"Severity\",\"Response Target\",\"Resolution Target\",\"Service Credit\",\"Evidence Required\"\n\"API Availability\",\"P1 - complete<br/>outage\",\"15 minutes\",\"4 hours\",\"10 percent monthly<br/>fee credit\",\"Monitoring logs and incident<br/>ticket\"\n\"API Availability\",\"P2 - degraded<br/>performance\",\"30 minutes\",\"8 hours\",\"5 percent monthly fee<br/>credit\",\"Latency dashboard and<br/>affected endpoint list\"\n\"Data Pipeline\",\"P1 - ingestion<br/>stopped\",\"20 minutes\",\"6 hours\",\"8 percent pipeline fee<br/>credit\",\"Queue depth, failed job IDs,<br/>replay report\"\n\"Data Pipeline\",\"P3 - delayed<br/>batch\",\"4 hours\",\"Next business day\",\"No automatic credit\",\"Batch ID and SLA exception<br/>note\"\n\"Support\",\"P2 - urgent<br/>support\",\"1 hour\",\"1 business day\",\"2 percent support fee<br/>credit\",\"Support ticket with timestamps\"",
-    "markdown": "| Service Category | Severity                      | Response Target | Resolution Target | Service Credit                    | Evidence Required                                |\n| ---------------- | ----------------------------- | --------------- | ----------------- | --------------------------------- | ------------------------------------------------ |\n| API Availability | P1 - complete<br/>outage      | 15 minutes      | 4 hours           | 10 percent monthly<br/>fee credit | Monitoring logs and incident<br/>ticket          |\n| API Availability | P2 - degraded<br/>performance | 30 minutes      | 8 hours           | 5 percent monthly fee<br/>credit  | Latency dashboard and<br/>affected endpoint list |\n| Data Pipeline    | P1 - ingestion<br/>stopped    | 20 minutes      | 6 hours           | 8 percent pipeline fee<br/>credit | Queue depth, failed job IDs,<br/>replay report   |\n| Data Pipeline    | P3 - delayed<br/>batch        | 4 hours         | Next business day | No automatic credit               | Batch ID and SLA exception<br/>note              |\n| Support          | P2 - urgent<br/>support       | 1 hour          | 1 business day    | 2 percent support fee<br/>credit  | Support ticket with timestamps                   |",
-    "html": "<table>\n  <thead>\n    <tr>\n        <th>Service Category</th>\n        <th>Severity</th>\n        <th>Response Target</th>\n        <th>Resolution Target</th>\n        <th>Service Credit</th>\n        <th>Evidence Required</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>API Availability</td>\n        <td>P1 - complete<br />outage</td>\n        <td>15 minutes</td>\n        <td>4 hours</td>\n        <td>10 percent monthly<br />fee credit</td>\n        <td>Monitoring logs and incident<br />ticket</td>\n    </tr>\n    <tr>\n        <td>API Availability</td>\n        <td>P2 - degraded<br />performance</td>\n        <td>30 minutes</td>\n        <td>8 hours</td>\n        <td>5 percent monthly fee<br />credit</td>\n        <td>Latency dashboard and<br />affected endpoint list</td>\n    </tr>\n    <tr>\n        <td>Data Pipeline</td>\n        <td>P1 - ingestion<br />stopped</td>\n        <td>20 minutes</td>\n        <td>6 hours</td>\n        <td>8 percent pipeline fee<br />credit</td>\n        <td>Queue depth, failed job IDs,<br />replay report</td>\n    </tr>\n    <tr>\n        <td>Data Pipeline</td>\n        <td>P3 - delayed<br />batch</td>\n        <td>4 hours</td>\n        <td>Next business day</td>\n        <td>No automatic credit</td>\n        <td>Batch ID and SLA exception<br />note</td>\n    </tr>\n    <tr>\n        <td>Support</td>\n        <td>P2 - urgent<br />support</td>\n        <td>1 hour</td>\n        <td>1 business day</td>\n        <td>2 percent support fee<br />credit</td>\n        <td>Support ticket with timestamps</td>\n    </tr>\n  </tbody>\n</table>"
+    "csv": "\"Service Category\",\"Severity\",\"Response Target\",\"Resolution Target\",\"Service Credit\",\"Evidence Required\"\n\"API Availability\",\"P1 - complete outage\",\"15 minutes\",\"4 hours\",\"10 percent monthly fee credit\",\"Monitoring logs and incident ticket\"\n\"API Availability\",\"P2 - degraded performance\",\"30 minutes\",\"8 hours\",\"5 percent monthly fee credit\",\"Latency dashboard and affected endpoint list\"\n\"Data Pipeline\",\"P1 - ingestion stopped\",\"20 minutes\",\"6 hours\",\"8 percent pipeline fee credit\",\"Queue depth, failed job IDs, replay report\"\n\"Data Pipeline\",\"P3 - delayed batch\",\"4 hours\",\"Next business day\",\"No automatic credit\",\"Batch ID and SLA exception note\"\n\"Support\",\"P2 - urgent support\",\"1 hour\",\"1 business day\",\"2 percent support fee credit\",\"Support ticket with timestamps\"",
+    "markdown": "| Service Category | Severity                  | Response Target | Resolution Target | Service Credit                | Evidence Required                            |\n| ---------------- | ------------------------- | --------------- | ----------------- | ----------------------------- | -------------------------------------------- |\n| API Availability | P1 - complete outage      | 15 minutes      | 4 hours           | 10 percent monthly fee credit | Monitoring logs and incident ticket          |\n| API Availability | P2 - degraded performance | 30 minutes      | 8 hours           | 5 percent monthly fee credit  | Latency dashboard and affected endpoint list |\n| Data Pipeline    | P1 - ingestion stopped    | 20 minutes      | 6 hours           | 8 percent pipeline fee credit | Queue depth, failed job IDs, replay report   |\n| Data Pipeline    | P3 - delayed batch        | 4 hours         | Next business day | No automatic credit           | Batch ID and SLA exception note              |\n| Support          | P2 - urgent support       | 1 hour          | 1 business day    | 2 percent support fee credit  | Support ticket with timestamps               |",
+    "html": "<table>\n  <thead>\n    <tr>\n        <th>Service Category</th>\n        <th>Severity</th>\n        <th>Response Target</th>\n        <th>Resolution Target</th>\n        <th>Service Credit</th>\n        <th>Evidence Required</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>API Availability</td>\n        <td>P1 - complete outage</td>\n        <td>15 minutes</td>\n        <td>4 hours</td>\n        <td>10 percent monthly fee credit</td>\n        <td>Monitoring logs and incident ticket</td>\n    </tr>\n    <tr>\n        <td>API Availability</td>\n        <td>P2 - degraded performance</td>\n        <td>30 minutes</td>\n        <td>8 hours</td>\n        <td>5 percent monthly fee credit</td>\n        <td>Latency dashboard and affected endpoint list</td>\n    </tr>\n    <tr>\n        <td>Data Pipeline</td>\n        <td>P1 - ingestion stopped</td>\n        <td>20 minutes</td>\n        <td>6 hours</td>\n        <td>8 percent pipeline fee credit</td>\n        <td>Queue depth, failed job IDs, replay report</td>\n    </tr>\n    <tr>\n        <td>Data Pipeline</td>\n        <td>P3 - delayed batch</td>\n        <td>4 hours</td>\n        <td>Next business day</td>\n        <td>No automatic credit</td>\n        <td>Batch ID and SLA exception note</td>\n    </tr>\n    <tr>\n        <td>Support</td>\n        <td>P2 - urgent support</td>\n        <td>1 hour</td>\n        <td>1 business day</td>\n        <td>2 percent support fee credit</td>\n        <td>Support ticket with timestamps</td>\n    </tr>\n  </tbody>\n</table>"
   },
   {
     "table_number": 7,
@@ -493,7 +493,7 @@
     "item_index": 4,
     "rows": [
       [
-        "Time Slot",
+        "",
         "Mon",
         "Tue",
         "Wed",
@@ -541,9 +541,9 @@
         "93"
       ]
     ],
-    "csv": "\"Time Slot\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\"\n\"Morning\",\"72\",\"48\",\"31\",\"18\",\"10\"\n\"Noon\",\"65\",\"54\",\"39\",\"20\",\"15\"\n\"Evening\",\"40\",\"62\",\"77\",\"58\",\"21\"\n\"Prime\",\"28\",\"43\",\"69\",\"88\",\"60\"\n\"Late\",\"18\",\"24\",\"45\",\"72\",\"93\"",
-    "markdown": "| Time Slot | Mon | Tue | Wed | Thu | Fri |\n| --------- | --- | --- | --- | --- | --- |\n| Morning   | 72  | 48  | 31  | 18  | 10  |\n| Noon      | 65  | 54  | 39  | 20  | 15  |\n| Evening   | 40  | 62  | 77  | 58  | 21  |\n| Prime     | 28  | 43  | 69  | 88  | 60  |\n| Late      | 18  | 24  | 45  | 72  | 93  |",
-    "html": "<table>\n  <thead>\n    <tr>\n        <th>Time Slot</th>\n        <th>Mon</th>\n        <th>Tue</th>\n        <th>Wed</th>\n        <th>Thu</th>\n        <th>Fri</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Morning</td>\n        <td>72</td>\n        <td>48</td>\n        <td>31</td>\n        <td>18</td>\n        <td>10</td>\n    </tr>\n    <tr>\n        <td>Noon</td>\n        <td>65</td>\n        <td>54</td>\n        <td>39</td>\n        <td>20</td>\n        <td>15</td>\n    </tr>\n    <tr>\n        <td>Evening</td>\n        <td>40</td>\n        <td>62</td>\n        <td>77</td>\n        <td>58</td>\n        <td>21</td>\n    </tr>\n    <tr>\n        <td>Prime</td>\n        <td>28</td>\n        <td>43</td>\n        <td>69</td>\n        <td>88</td>\n        <td>60</td>\n    </tr>\n    <tr>\n        <td>Late</td>\n        <td>18</td>\n        <td>24</td>\n        <td>45</td>\n        <td>72</td>\n        <td>93</td>\n    </tr>\n  </tbody>\n</table>"
+    "csv": ",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\"\n\"Morning\",\"72\",\"48\",\"31\",\"18\",\"10\"\n\"Noon\",\"65\",\"54\",\"39\",\"20\",\"15\"\n\"Evening\",\"40\",\"62\",\"77\",\"58\",\"21\"\n\"Prime\",\"28\",\"43\",\"69\",\"88\",\"60\"\n\"Late\",\"18\",\"24\",\"45\",\"72\",\"93\"",
+    "markdown": "|         | Mon | Tue | Wed | Thu | Fri |\n| ------- | --- | --- | --- | --- | --- |\n| Morning | 72  | 48  | 31  | 18  | 10  |\n| Noon    | 65  | 54  | 39  | 20  | 15  |\n| Evening | 40  | 62  | 77  | 58  | 21  |\n| Prime   | 28  | 43  | 69  | 88  | 60  |\n| Late    | 18  | 24  | 45  | 72  | 93  |",
+    "html": "<table>\n  <thead>\n    <tr>\n        <th> </th>\n        <th>Mon</th>\n        <th>Tue</th>\n        <th>Wed</th>\n        <th>Thu</th>\n        <th>Fri</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Morning</td>\n        <td>72</td>\n        <td>48</td>\n        <td>31</td>\n        <td>18</td>\n        <td>10</td>\n    </tr>\n    <tr>\n        <td>Noon</td>\n        <td>65</td>\n        <td>54</td>\n        <td>39</td>\n        <td>20</td>\n        <td>15</td>\n    </tr>\n    <tr>\n        <td>Evening</td>\n        <td>40</td>\n        <td>62</td>\n        <td>77</td>\n        <td>58</td>\n        <td>21</td>\n    </tr>\n    <tr>\n        <td>Prime</td>\n        <td>28</td>\n        <td>43</td>\n        <td>69</td>\n        <td>88</td>\n        <td>60</td>\n    </tr>\n    <tr>\n        <td>Late</td>\n        <td>18</td>\n        <td>24</td>\n        <td>45</td>\n        <td>72</td>\n        <td>93</td>\n    </tr>\n  </tbody>\n</table>"
   },
   {
     "table_number": 13,
@@ -736,6 +736,7 @@
         "Clause Group",
         "Obligation",
         "Responsible Team",
+        "Responsible Team",
         "Trigger",
         "Evidence Required",
         "Risk"
@@ -743,55 +744,115 @@
       [
         "Data Protection",
         "Delete client data after contract termination unless retention is legally required.",
-        "Owner Compliance<br/>Backup Legal",
+        "Owner",
+        "Compliance",
         "Termination notice received",
         "Deletion certificate + audit log export",
         "High"
       ],
       [
         "",
+        "",
+        "Backup",
+        "Legal",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
         "Notify client about any confirmed data incident within 72 hours.",
-        "Owner Security<br/>Backup DPO",
+        "Owner",
+        "Security",
         "Incident classified as confirmed breach",
         "Incident report, timeline, notification proof",
         "Critical"
       ],
       [
+        "",
+        "",
+        "Backup",
+        "DPO",
+        "",
+        "",
+        ""
+      ],
+      [
         "Billing",
         "Apply annual platform fee adjustment only after renewal confirmation.",
-        "Owner Finance<br/>Backup CSM",
+        "Owner",
+        "Finance",
         "Renewal order approved",
         "Approved renewal sheet + invoice draft",
         "Medium"
       ],
       [
         "",
+        "",
+        "Backup",
+        "CSM",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
         "Do not bill inactive campuses during suspension period.",
-        "Owner Revenue Ops<br/>Backup Finance",
+        "Owner",
+        "Revenue Ops",
         "Campus status = suspended",
         "ERP campus status export",
         "High"
       ],
       [
+        "",
+        "",
+        "Backup",
+        "Finance",
+        "",
+        "",
+        ""
+      ],
+      [
         "Support",
         "Provide P1 response within 30 minutes during school operating hours.",
-        "Owner Support L2<br/>Backup Ops Manager",
+        "Owner",
+        "Support L2",
         "Ticket priority = P1",
         "Ticket timestamps + agent assignment log",
         "High"
       ],
       [
         "",
+        "",
+        "Backup",
+        "Ops Manager",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
         "Escalate unresolved P2 tickets after 4 business hours.",
-        "Owner Support L1<br/>Backup Support L2",
+        "Owner",
+        "Support L1",
         "Ticket age > 4 business hours",
         "Escalation log",
         "Medium"
+      ],
+      [
+        "",
+        "",
+        "Backup",
+        "Support L2",
+        "",
+        "",
+        ""
       ]
     ],
-    "csv": "\"Clause Group\",\"Obligation\",\"Responsible Team\",\"Trigger\",\"Evidence Required\",\"Risk\"\n\"Data Protection\",\"Delete client data after contract termination unless retention is legally required.\",\"Owner Compliance<br/>Backup Legal\",\"Termination notice received\",\"Deletion certificate + audit log export\",\"High\"\n,\"Notify client about any confirmed data incident within 72 hours.\",\"Owner Security<br/>Backup DPO\",\"Incident classified as confirmed breach\",\"Incident report, timeline, notification proof\",\"Critical\"\n\"Billing\",\"Apply annual platform fee adjustment only after renewal confirmation.\",\"Owner Finance<br/>Backup CSM\",\"Renewal order approved\",\"Approved renewal sheet + invoice draft\",\"Medium\"\n,\"Do not bill inactive campuses during suspension period.\",\"Owner Revenue Ops<br/>Backup Finance\",\"Campus status = suspended\",\"ERP campus status export\",\"High\"\n\"Support\",\"Provide P1 response within 30 minutes during school operating hours.\",\"Owner Support L2<br/>Backup Ops Manager\",\"Ticket priority = P1\",\"Ticket timestamps + agent assignment log\",\"High\"\n,\"Escalate unresolved P2 tickets after 4 business hours.\",\"Owner Support L1<br/>Backup Support L2\",\"Ticket age > 4 business hours\",\"Escalation log\",\"Medium\"",
-    "markdown": "| Clause Group    | Obligation                                                                          | Responsible Team                                | Trigger                                 | Evidence Required                             | Risk     |\n| --------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------- | --------------------------------------- | --------------------------------------------- | -------- |\n| Data Protection | Delete client data after contract termination unless retention is legally required. | **Owner** Compliance<br/>**Backup** Legal       | Termination notice received             | Deletion certificate + audit log export       | High     |\n|                 | Notify client about any confirmed data incident within 72 hours.                    | **Owner** Security<br/>**Backup** DPO           | Incident classified as confirmed breach | Incident report, timeline, notification proof | Critical |\n| Billing         | Apply annual platform fee adjustment only after renewal confirmation.               | **Owner** Finance<br/>**Backup** CSM            | Renewal order approved                  | Approved renewal sheet + invoice draft        | Medium   |\n|                 | Do not bill inactive campuses during suspension period.                             | **Owner** Revenue Ops<br/>**Backup** Finance    | Campus status = suspended               | ERP campus status export                      | High     |\n| Support         | Provide P1 response within 30 minutes during school operating hours.                | **Owner** Support L2<br/>**Backup** Ops Manager | Ticket priority = P1                    | Ticket timestamps + agent assignment log      | High     |\n|                 | Escalate unresolved P2 tickets after 4 business hours.                              | **Owner** Support L1<br/>**Backup** Support L2  | Ticket age > 4 business hours           | Escalation log                                | Medium   |",
-    "html": "<table>\n  <thead>\n    <tr>\n        <th>Clause Group</th>\n        <th>Obligation</th>\n        <th>Responsible Team</th>\n        <th>Trigger</th>\n        <th>Evidence Required</th>\n        <th>Risk</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td rowspan=\"2\">Data Protection</td>\n        <td>Delete client data after contract termination unless retention is legally required.</td>\n        <td><strong>Owner</strong> Compliance<br /><strong>Backup</strong> Legal</td>\n        <td>Termination notice received</td>\n        <td>Deletion certificate + audit log export</td>\n        <td>High</td>\n    </tr>\n    <tr>\n        <td>Notify client about any confirmed data incident within 72 hours.</td>\n        <td><strong>Owner</strong> Security<br /><strong>Backup</strong> DPO</td>\n        <td>Incident classified as confirmed breach</td>\n        <td>Incident report, timeline, notification proof</td>\n        <td>Critical</td>\n    </tr>\n    <tr>\n        <td rowspan=\"2\">Billing</td>\n        <td>Apply annual platform fee adjustment only after renewal confirmation.</td>\n        <td><strong>Owner</strong> Finance<br /><strong>Backup</strong> CSM</td>\n        <td>Renewal order approved</td>\n        <td>Approved renewal sheet + invoice draft</td>\n        <td>Medium</td>\n    </tr>\n    <tr>\n        <td>Do not bill inactive campuses during suspension period.</td>\n        <td><strong>Owner</strong> Revenue Ops<br /><strong>Backup</strong> Finance</td>\n        <td>Campus status = suspended</td>\n        <td>ERP campus status export</td>\n        <td>High</td>\n    </tr>\n    <tr>\n        <td rowspan=\"2\">Support</td>\n        <td>Provide P1 response within 30 minutes during school operating hours.</td>\n        <td><strong>Owner</strong> Support L2<br /><strong>Backup</strong> Ops Manager</td>\n        <td>Ticket priority = P1</td>\n        <td>Ticket timestamps + agent assignment log</td>\n        <td>High</td>\n    </tr>\n    <tr>\n        <td>Escalate unresolved P2 tickets after 4 business hours.</td>\n        <td><strong>Owner</strong> Support L1<br /><strong>Backup</strong> Support L2</td>\n        <td>Ticket age > 4 business hours</td>\n        <td>Escalation log</td>\n        <td>Medium</td>\n    </tr>\n  </tbody>\n</table>"
+    "csv": "\"Clause Group\",\"Obligation\",\"Responsible Team\",\"Responsible Team\",\"Trigger\",\"Evidence Required\",\"Risk\"\n\"Data Protection\",\"Delete client data after contract termination unless retention is legally required.\",\"Owner\",\"Compliance\",\"Termination notice received\",\"Deletion certificate + audit log export\",\"High\"\n,,\"Backup\",\"Legal\",,,\n,\"Notify client about any confirmed data incident within 72 hours.\",\"Owner\",\"Security\",\"Incident classified as confirmed breach\",\"Incident report, timeline, notification proof\",\"Critical\"\n,,\"Backup\",\"DPO\",,,\n\"Billing\",\"Apply annual platform fee adjustment only after renewal confirmation.\",\"Owner\",\"Finance\",\"Renewal order approved\",\"Approved renewal sheet + invoice draft\",\"Medium\"\n,,\"Backup\",\"CSM\",,,\n,\"Do not bill inactive campuses during suspension period.\",\"Owner\",\"Revenue Ops\",\"Campus status = suspended\",\"ERP campus status export\",\"High\"\n,,\"Backup\",\"Finance\",,,\n\"Support\",\"Provide P1 response within 30 minutes during school operating hours.\",\"Owner\",\"Support L2\",\"Ticket priority = P1\",\"Ticket timestamps + agent assignment log\",\"High\"\n,,\"Backup\",\"Ops Manager\",,,\n,\"Escalate unresolved P2 tickets after 4 business hours.\",\"Owner\",\"Support L1\",\"Ticket age > 4 business hours\",\"Escalation log\",\"Medium\"\n,,\"Backup\",\"Support L2\",,,",
+    "markdown": "| Clause Group    | Obligation                                                                          | Responsible Team | Responsible Team | Trigger                                 | Evidence Required                             | Risk     |\n| --------------- | ----------------------------------------------------------------------------------- | ---------------- | ---------------- | --------------------------------------- | --------------------------------------------- | -------- |\n| Data Protection | Delete client data after contract termination unless retention is legally required. | Owner            | Compliance       | Termination notice received             | Deletion certificate + audit log export       | High     |\n|                 |                                                                                     | Backup           | Legal            |                                         |                                               |          |\n|                 | Notify client about any confirmed data incident within 72 hours.                    | Owner            | Security         | Incident classified as confirmed breach | Incident report, timeline, notification proof | Critical |\n|                 |                                                                                     | Backup           | DPO              |                                         |                                               |          |\n| Billing         | Apply annual platform fee adjustment only after renewal confirmation.               | Owner            | Finance          | Renewal order approved                  | Approved renewal sheet + invoice draft        | Medium   |\n|                 |                                                                                     | Backup           | CSM              |                                         |                                               |          |\n|                 | Do not bill inactive campuses during suspension period.                             | Owner            | Revenue Ops      | Campus status = suspended               | ERP campus status export                      | High     |\n|                 |                                                                                     | Backup           | Finance          |                                         |                                               |          |\n| Support         | Provide P1 response within 30 minutes during school operating hours.                | Owner            | Support L2       | Ticket priority = P1                    | Ticket timestamps + agent assignment log      | High     |\n|                 |                                                                                     | Backup           | Ops Manager      |                                         |                                               |          |\n|                 | Escalate unresolved P2 tickets after 4 business hours.                              | Owner            | Support L1       | Ticket age > 4 business hours           | Escalation log                                | Medium   |\n|                 |                                                                                     | Backup           | Support L2       |                                         |                                               |          |",
+    "html": "<table>\n  <thead>\n    <tr>\n        <th>Clause Group</th>\n        <th>Obligation</th>\n        <th colspan=\"2\">Responsible Team</th>\n        <th>Trigger</th>\n        <th>Evidence Required</th>\n        <th>Risk</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td rowspan=\"4\">Data Protection</td>\n        <td rowspan=\"2\">Delete client data after contract termination unless retention is legally required.</td>\n        <td>Owner</td>\n        <td>Compliance</td>\n        <td rowspan=\"2\">Termination notice received</td>\n        <td rowspan=\"2\">Deletion certificate + audit log export</td>\n        <td rowspan=\"2\">High</td>\n    </tr>\n    <tr>\n        <td>Backup</td>\n        <td>Legal</td>\n    </tr>\n    <tr>\n        <td rowspan=\"2\">Notify client about any confirmed data incident within 72 hours.</td>\n        <td>Owner</td>\n        <td>Security</td>\n        <td rowspan=\"2\">Incident classified as confirmed breach</td>\n        <td rowspan=\"2\">Incident report, timeline, notification proof</td>\n        <td rowspan=\"2\">Critical</td>\n    </tr>\n    <tr>\n        <td>Backup</td>\n        <td>DPO</td>\n    </tr>\n    <tr>\n        <td rowspan=\"4\">Billing</td>\n        <td rowspan=\"2\">Apply annual platform fee adjustment only after renewal confirmation.</td>\n        <td>Owner</td>\n        <td>Finance</td>\n        <td rowspan=\"2\">Renewal order approved</td>\n        <td rowspan=\"2\">Approved renewal sheet + invoice draft</td>\n        <td rowspan=\"2\">Medium</td>\n    </tr>\n    <tr>\n        <td>Backup</td>\n        <td>CSM</td>\n    </tr>\n    <tr>\n        <td rowspan=\"2\">Do not bill inactive campuses during suspension period.</td>\n        <td>Owner</td>\n        <td>Revenue Ops</td>\n        <td rowspan=\"2\">Campus status = suspended</td>\n        <td rowspan=\"2\">ERP campus status export</td>\n        <td rowspan=\"2\">High</td>\n    </tr>\n    <tr>\n        <td>Backup</td>\n        <td>Finance</td>\n    </tr>\n    <tr>\n        <td rowspan=\"4\">Support</td>\n        <td rowspan=\"2\">Provide P1 response within 30 minutes during school operating hours.</td>\n        <td>Owner</td>\n        <td>Support L2</td>\n        <td rowspan=\"2\">Ticket priority = P1</td>\n        <td rowspan=\"2\">Ticket timestamps + agent assignment log</td>\n        <td rowspan=\"2\">High</td>\n    </tr>\n    <tr>\n        <td>Backup</td>\n        <td>Ops Manager</td>\n    </tr>\n    <tr>\n        <td rowspan=\"2\">Escalate unresolved P2 tickets after 4 business hours.</td>\n        <td>Owner</td>\n        <td>Support L1</td>\n        <td rowspan=\"2\">Ticket age > 4 business hours</td>\n        <td rowspan=\"2\">Escalation log</td>\n        <td rowspan=\"2\">Medium</td>\n    </tr>\n    <tr>\n        <td>Backup</td>\n        <td>Support L2</td>\n    </tr>\n  </tbody>\n</table>"
   },
   {
     "table_number": 18,
@@ -823,7 +884,7 @@
         "USD 18,000",
         "INR 0.15/message",
         "INR 0.38/message",
-        "50% advance + monthly usage"
+        "50% advance +<br/>monthly usage"
       ],
       [
         "Enterprise",
@@ -844,9 +905,9 @@
         "Requires CFO approval"
       ]
     ],
-    "csv": "\"Plan\",\"Student Volume\",\"Annual Platform Charges<br/>India Region\",\"Annual Platform Charges<br/>International\",\"Usage Add-ons<br/>SMS\",\"Usage Add-ons<br/>WhatsApp\",\"Billing Rule\"\n\"Starter\",\"0 - 2,000 students\",\"Base INR 4.5L<br/>Support INR 60K\",\"USD 7,200\",\"INR 0.18/message\",\"INR 0.42/message\",\"Quarterly advance\"\n\"Growth\",\"2,001 - 10,000 students\",\"Base INR 11L<br/>Support INR 1.4L\",\"USD 18,000\",\"INR 0.15/message\",\"INR 0.38/message\",\"50% advance + monthly usage\"\n\"Enterprise\",\"10,001+ students\",\"Base Custom<br/>Support Included\",\"Custom\",\"Negotiated\",\"Negotiated\",\"Signed order form required\"\n\"Exception\",\"Government schools\",\"Discount may apply after approval\",,\"No discount on pass-through cost\",,\"Requires CFO approval\"",
-    "markdown": "| Plan       | Student Volume          | Annual Platform Charges<br/>India Region  | Annual Platform Charges<br/>International | Usage Add-ons<br/>SMS            | Usage Add-ons<br/>WhatsApp | Billing Rule                |\n| ---------- | ----------------------- | ----------------------------------------- | ----------------------------------------- | -------------------------------- | -------------------------- | --------------------------- |\n| Starter    | 0 - 2,000 students      | **Base** INR 4.5L<br/>**Support** INR 60K | USD 7,200                                 | INR 0.18/message                 | INR 0.42/message           | Quarterly advance           |\n| Growth     | 2,001 - 10,000 students | **Base** INR 11L<br/>**Support** INR 1.4L | USD 18,000                                | INR 0.15/message                 | INR 0.38/message           | 50% advance + monthly usage |\n| Enterprise | 10,001+ students        | **Base** Custom<br/>**Support** Included  | Custom                                    | Negotiated                       | Negotiated                 | Signed order form required  |\n| Exception  | Government schools      | Discount may apply after approval         |                                           | No discount on pass-through cost |                            | Requires CFO approval       |",
-    "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">Plan</th>\n        <th rowspan=\"2\">Student Volume</th>\n        <th colspan=\"2\">Annual Platform Charges</th>\n        <th colspan=\"2\">Usage Add-ons</th>\n        <th rowspan=\"2\">Billing Rule</th>\n    </tr>\n    <tr>\n        <th>India Region</th>\n        <th>International</th>\n        <th>SMS</th>\n        <th>WhatsApp</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Starter</td>\n        <td>0 - 2,000 students</td>\n        <td><strong>Base</strong> INR 4.5L<br /><strong>Support</strong> INR 60K</td>\n        <td>USD 7,200</td>\n        <td>INR 0.18/message</td>\n        <td>INR 0.42/message</td>\n        <td>Quarterly advance</td>\n    </tr>\n    <tr>\n        <td>Growth</td>\n        <td>2,001 - 10,000 students</td>\n        <td><strong>Base</strong> INR 11L<br /><strong>Support</strong> INR 1.4L</td>\n        <td>USD 18,000</td>\n        <td>INR 0.15/message</td>\n        <td>INR 0.38/message</td>\n        <td>50% advance + monthly usage</td>\n    </tr>\n    <tr>\n        <td>Enterprise</td>\n        <td>10,001+ students</td>\n        <td><strong>Base</strong> Custom<br /><strong>Support</strong> Included</td>\n        <td>Custom</td>\n        <td>Negotiated</td>\n        <td>Negotiated</td>\n        <td>Signed order form required</td>\n    </tr>\n    <tr>\n        <td>Exception</td>\n        <td>Government schools</td>\n        <td colspan=\"2\">Discount may apply after approval</td>\n        <td colspan=\"2\">No discount on pass-through cost</td>\n        <td>Requires CFO approval</td>\n    </tr>\n  </tbody>\n</table>"
+    "csv": "\"Plan\",\"Student Volume\",\"Annual Platform Charges<br/>India Region\",\"Annual Platform Charges<br/>International\",\"Usage Add-ons<br/>SMS\",\"Usage Add-ons<br/>WhatsApp\",\"Billing Rule\"\n\"Starter\",\"0 - 2,000 students\",\"Base INR 4.5L<br/>Support INR 60K\",\"USD 7,200\",\"INR 0.18/message\",\"INR 0.42/message\",\"Quarterly advance\"\n\"Growth\",\"2,001 - 10,000 students\",\"Base INR 11L<br/>Support INR 1.4L\",\"USD 18,000\",\"INR 0.15/message\",\"INR 0.38/message\",\"50% advance +<br/>monthly usage\"\n\"Enterprise\",\"10,001+ students\",\"Base Custom<br/>Support Included\",\"Custom\",\"Negotiated\",\"Negotiated\",\"Signed order form required\"\n\"Exception\",\"Government schools\",\"Discount may apply after approval\",,\"No discount on pass-through cost\",,\"Requires CFO approval\"",
+    "markdown": "| Plan       | Student Volume          | Annual Platform Charges<br/>India Region  | Annual Platform Charges<br/>International | Usage Add-ons<br/>SMS            | Usage Add-ons<br/>WhatsApp | Billing Rule                    |\n| ---------- | ----------------------- | ----------------------------------------- | ----------------------------------------- | -------------------------------- | -------------------------- | ------------------------------- |\n| Starter    | 0 - 2,000 students      | **Base** INR 4.5L<br/>**Support** INR 60K | USD 7,200                                 | INR 0.18/message                 | INR 0.42/message           | Quarterly advance               |\n| Growth     | 2,001 - 10,000 students | **Base** INR 11L<br/>**Support** INR 1.4L | USD 18,000                                | INR 0.15/message                 | INR 0.38/message           | 50% advance +<br/>monthly usage |\n| Enterprise | 10,001+ students        | **Base** Custom<br/>**Support** Included  | Custom                                    | Negotiated                       | Negotiated                 | Signed order form required      |\n| Exception  | Government schools      | Discount may apply after approval         |                                           | No discount on pass-through cost |                            | Requires CFO approval           |",
+    "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">Plan</th>\n        <th rowspan=\"2\">Student Volume</th>\n        <th colspan=\"2\">Annual Platform Charges</th>\n        <th colspan=\"2\">Usage Add-ons</th>\n        <th rowspan=\"2\">Billing Rule</th>\n    </tr>\n    <tr>\n        <th>India Region</th>\n        <th>International</th>\n        <th>SMS</th>\n        <th>WhatsApp</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Starter</td>\n        <td>0 - 2,000 students</td>\n        <td><strong>Base</strong> INR 4.5L<br /><strong>Support</strong> INR 60K</td>\n        <td>USD 7,200</td>\n        <td>INR 0.18/message</td>\n        <td>INR 0.42/message</td>\n        <td>Quarterly advance</td>\n    </tr>\n    <tr>\n        <td>Growth</td>\n        <td>2,001 - 10,000 students</td>\n        <td><strong>Base</strong> INR 11L<br /><strong>Support</strong> INR 1.4L</td>\n        <td>USD 18,000</td>\n        <td>INR 0.15/message</td>\n        <td>INR 0.38/message</td>\n        <td>50% advance +<br />monthly usage</td>\n    </tr>\n    <tr>\n        <td>Enterprise</td>\n        <td>10,001+ students</td>\n        <td><strong>Base</strong> Custom<br /><strong>Support</strong> Included</td>\n        <td>Custom</td>\n        <td>Negotiated</td>\n        <td>Negotiated</td>\n        <td>Signed order form required</td>\n    </tr>\n    <tr>\n        <td>Exception</td>\n        <td>Government schools</td>\n        <td colspan=\"2\">Discount may apply after approval</td>\n        <td colspan=\"2\">No discount on pass-through cost</td>\n        <td>Requires CFO approval</td>\n    </tr>\n  </tbody>\n</table>"
   },
   {
     "table_number": 19,
@@ -864,7 +925,7 @@
       ],
       [
         "ERP Platform",
-        "Annual School360 Enterprise Subscription -<br/>12 campuses",
+        "Annual School360 Enterprise Subscription - 12 campuses",
         "1",
         "INR 11,00,000",
         "9%",
@@ -873,7 +934,7 @@
       ],
       [
         "",
-        "Parent communication add-on - estimated<br/>message pack",
+        "Parent communication add-on - estimated message pack",
         "2,00,000 msgs",
         "INR 0.36/msg",
         "9%",
@@ -892,16 +953,16 @@
       [
         "Summary",
         "Subtotal and taxes",
-        "\\*",
+        "*",
         "INR 14,16,000",
         "INR 1,27,440",
         "INR 1,27,440",
         "INR 16,70,880"
       ]
     ],
-    "csv": "\"Item Group\",\"Line Item\",\"Qty\",\"Rate\",\"Tax Split<br/>CGST\",\"Tax Split<br/>SGST\",\"Total\"\n\"ERP Platform\",\"Annual School360 Enterprise Subscription -<br/>12 campuses\",\"1\",\"INR 11,00,000\",\"9%\",\"9%\",\"INR 12,98,000\"\n,\"Parent communication add-on - estimated<br/>message pack\",\"2,00,000 msgs\",\"INR 0.36/msg\",\"9%\",\"9%\",\"INR 89,680\"\n\"Implementation\",\"Data migration + training + go-live support\",\"1\",\"INR 2,40,000\",\"9%\",\"9%\",\"INR 2,83,200\"\n\"Summary\",\"Subtotal and taxes\",\"\\*\",\"INR 14,16,000\",\"INR 1,27,440\",\"INR 1,27,440\",\"INR 16,70,880\"",
-    "markdown": "| Item Group     | Line Item                                                  | Qty           | Rate          | Tax Split<br/>CGST | Tax Split<br/>SGST | Total         |\n| -------------- | ---------------------------------------------------------- | ------------- | ------------- | ------------------ | ------------------ | ------------- |\n| ERP Platform   | Annual School360 Enterprise Subscription -<br/>12 campuses | 1             | INR 11,00,000 | 9%                 | 9%                 | INR 12,98,000 |\n|                | Parent communication add-on - estimated<br/>message pack   | 2,00,000 msgs | INR 0.36/msg  | 9%                 | 9%                 | INR 89,680    |\n| Implementation | Data migration + training + go-live support                | 1             | INR 2,40,000  | 9%                 | 9%                 | INR 2,83,200  |\n| Summary        | Subtotal and taxes                                         | \\\\\\*          | INR 14,16,000 | INR 1,27,440       | INR 1,27,440       | INR 16,70,880 |",
-    "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">Item Group</th>\n        <th rowspan=\"2\">Line Item</th>\n        <th rowspan=\"2\">Qty</th>\n        <th rowspan=\"2\">Rate</th>\n        <th colspan=\"2\">Tax Split</th>\n        <th rowspan=\"2\">Total</th>\n    </tr>\n    <tr>\n        <th>CGST</th>\n        <th>SGST</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td rowspan=\"2\">ERP Platform</td>\n        <td>Annual School360 Enterprise Subscription -<br />12 campuses</td>\n        <td>1</td>\n        <td>INR 11,00,000</td>\n        <td>9%</td>\n        <td>9%</td>\n        <td>INR 12,98,000</td>\n    </tr>\n    <tr>\n        <td>Parent communication add-on - estimated<br />message pack</td>\n        <td>2,00,000 msgs</td>\n        <td>INR 0.36/msg</td>\n        <td>9%</td>\n        <td>9%</td>\n        <td>INR 89,680</td>\n    </tr>\n    <tr>\n        <td>Implementation</td>\n        <td>Data migration + training + go-live support</td>\n        <td>1</td>\n        <td>INR 2,40,000</td>\n        <td>9%</td>\n        <td>9%</td>\n        <td>INR 2,83,200</td>\n    </tr>\n    <tr>\n        <td>Summary</td>\n        <td>Subtotal and taxes</td>\n        <td>\\*</td>\n        <td>INR 14,16,000</td>\n        <td>INR 1,27,440</td>\n        <td>INR 1,27,440</td>\n        <td>INR 16,70,880</td>\n    </tr>\n  </tbody>\n</table>"
+    "csv": "\"Item Group\",\"Line Item\",\"Qty\",\"Rate\",\"Tax Split<br/>CGST\",\"Tax Split<br/>SGST\",\"Total\"\n\"ERP Platform\",\"Annual School360 Enterprise Subscription - 12 campuses\",\"1\",\"INR 11,00,000\",\"9%\",\"9%\",\"INR 12,98,000\"\n,\"Parent communication add-on - estimated message pack\",\"2,00,000 msgs\",\"INR 0.36/msg\",\"9%\",\"9%\",\"INR 89,680\"\n\"Implementation\",\"Data migration + training + go-live support\",\"1\",\"INR 2,40,000\",\"9%\",\"9%\",\"INR 2,83,200\"\n\"Summary\",\"Subtotal and taxes\",\"*\",\"INR 14,16,000\",\"INR 1,27,440\",\"INR 1,27,440\",\"INR 16,70,880\"",
+    "markdown": "| Item Group     | Line Item                                              | Qty           | Rate          | Tax Split<br/>CGST | Tax Split<br/>SGST | Total         |\n| -------------- | ------------------------------------------------------ | ------------- | ------------- | ------------------ | ------------------ | ------------- |\n| ERP Platform   | Annual School360 Enterprise Subscription - 12 campuses | 1             | INR 11,00,000 | 9%                 | 9%                 | INR 12,98,000 |\n|                | Parent communication add-on - estimated message pack   | 2,00,000 msgs | INR 0.36/msg  | 9%                 | 9%                 | INR 89,680    |\n| Implementation | Data migration + training + go-live support            | 1             | INR 2,40,000  | 9%                 | 9%                 | INR 2,83,200  |\n| Summary        | Subtotal and taxes                                     | \\*            | INR 14,16,000 | INR 1,27,440       | INR 1,27,440       | INR 16,70,880 |",
+    "html": "<table>\n  <thead>\n    <tr>\n        <th rowspan=\"2\">Item Group</th>\n        <th rowspan=\"2\">Line Item</th>\n        <th rowspan=\"2\">Qty</th>\n        <th rowspan=\"2\">Rate</th>\n        <th colspan=\"2\">Tax Split</th>\n        <th rowspan=\"2\">Total</th>\n    </tr>\n    <tr>\n        <th>CGST</th>\n        <th>SGST</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td rowspan=\"2\">ERP Platform</td>\n        <td>Annual School360 Enterprise Subscription - 12 campuses</td>\n        <td>1</td>\n        <td>INR 11,00,000</td>\n        <td>9%</td>\n        <td>9%</td>\n        <td>INR 12,98,000</td>\n    </tr>\n    <tr>\n        <td>Parent communication add-on - estimated message pack</td>\n        <td>2,00,000 msgs</td>\n        <td>INR 0.36/msg</td>\n        <td>9%</td>\n        <td>9%</td>\n        <td>INR 89,680</td>\n    </tr>\n    <tr>\n        <td>Implementation</td>\n        <td>Data migration + training + go-live support</td>\n        <td>1</td>\n        <td>INR 2,40,000</td>\n        <td>9%</td>\n        <td>9%</td>\n        <td>INR 2,83,200</td>\n    </tr>\n    <tr>\n        <td>Summary</td>\n        <td>Subtotal and taxes</td>\n        <td>*</td>\n        <td>INR 14,16,000</td>\n        <td>INR 1,27,440</td>\n        <td>INR 1,27,440</td>\n        <td>INR 16,70,880</td>\n    </tr>\n  </tbody>\n</table>"
   },
   {
     "table_number": 20,
@@ -910,7 +971,7 @@
     "rows": [
       [
         "Month",
-        "Open Risks"
+        "Open Contract Risks"
       ],
       [
         "Jan",
@@ -937,14 +998,14 @@
         "45"
       ]
     ],
-    "csv": "\"Month\",\"Open Risks\"\n\"Jan\",\"18\"\n\"Feb\",\"24\"\n\"Mar\",\"31\"\n\"Apr\",\"26\"\n\"May\",\"38\"\n\"Jun\",\"45\"",
-    "markdown": "| Month | Open Risks |\n| ----- | ---------- |\n| Jan   | 18         |\n| Feb   | 24         |\n| Mar   | 31         |\n| Apr   | 26         |\n| May   | 38         |\n| Jun   | 45         |",
-    "html": "<table>\n  <thead>\n    <tr>\n        <th>Month</th>\n        <th>Open Risks</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n        <td>Jan</td>\n        <td>18</td>\n    </tr>\n    <tr>\n        <td>Feb</td>\n        <td>24</td>\n    </tr>\n    <tr>\n        <td>Mar</td>\n        <td>31</td>\n    </tr>\n    <tr>\n        <td>Apr</td>\n        <td>26</td>\n    </tr>\n    <tr>\n        <td>May</td>\n        <td>38</td>\n    </tr>\n    <tr>\n        <td>Jun</td>\n        <td>45</td>\n    </tr>\n  </tbody>\n</table>"
+    "csv": "\"Month\",\"Open Contract Risks\"\n\"Jan\",\"18\"\n\"Feb\",\"24\"\n\"Mar\",\"31\"\n\"Apr\",\"26\"\n\"May\",\"38\"\n\"Jun\",\"45\"",
+    "markdown": "| Month | Open Contract Risks |\n| ----- | ------------------- |\n| Jan   | 18                  |\n| Feb   | 24                  |\n| Mar   | 31                  |\n| Apr   | 26                  |\n| May   | 38                  |\n| Jun   | 45                  |",
+    "html": "<table>\n    <tr>\n        <td>Month</td>\n        <td>Open Contract Risks</td>\n    </tr>\n    <tr>\n        <td>Jan</td>\n        <td>18</td>\n    </tr>\n    <tr>\n        <td>Feb</td>\n        <td>24</td>\n    </tr>\n    <tr>\n        <td>Mar</td>\n        <td>31</td>\n    </tr>\n    <tr>\n        <td>Apr</td>\n        <td>26</td>\n    </tr>\n    <tr>\n        <td>May</td>\n        <td>38</td>\n    </tr>\n    <tr>\n        <td>Jun</td>\n        <td>45</td>\n    </tr>\n</table>"
   },
   {
     "table_number": 21,
     "page_number": 20,
-    "item_index": 9,
+    "item_index": 11,
     "rows": [
       [
         "Client",
@@ -978,7 +1039,7 @@
   {
     "table_number": 22,
     "page_number": 22,
-    "item_index": 10,
+    "item_index": 9,
     "rows": [
       [
         "#",
@@ -1016,7 +1077,7 @@
   {
     "table_number": 23,
     "page_number": 23,
-    "item_index": 10,
+    "item_index": 12,
     "rows": [
       [
         "#",

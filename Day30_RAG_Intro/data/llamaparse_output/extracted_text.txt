@@ -245,9 +245,8 @@ PDF / DOCX / HTML    Text + Tables    Sections + Metadata  Embeddings
 
 
 
-
-User Query    Retriever    LLM
-question      top-k chunks    grounded answer
+User Query    Retriever        LLM
+question      top-k chunks     grounded answer
 
 
 
@@ -440,11 +439,12 @@ Noon  65  54  39  20  15
 Evening  40  62  77  58  21
 
 
+
 Prime  28  43  69  88  60
 
 
 
-                          Late  18   24                 45   72  93
+                          Late  18   24                 45   72    93
 
                                 Mon  Tue                Wed  Thu  Fri
 
@@ -572,19 +572,19 @@ grouping, merged-looking labels, split responsibility cells, and long evidence t
 Parsing challenge: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around
 the table.
 
-and a spiilt responsibility cell wnere owner and Dackup are shown inside thne same row.
-Clause Group        Obligation                            Responsible Team          Trigger                      Evidence Required             Risk
+and a spllt responsibility cell wnere owner and Dackup are shown Inside une same row.
+Clause Group        Obligation                            Responsible Team           Trigger                      Evidence Required            Risk
 Data Protection     Delete client data after contract     Owner      Compliance      Termination notice          Deletion certificate + audit log High
-                    termination unless retention is       Backup     Legal          reecceived                   export
+                    termination unless retention is       Backup     Legal           received                    export
                     legally required.
                     Notify client about any confirmed     Owner       Security       Incident classified as      Incident report, timeline,     Critical
-                    data incident within 72 hours.        Backup      DPO            confirmed breach            notification proof
-Billing             Apply annual platform fee             Owner      Finance         Renewal order approved      Approved renewal sheet +       Medium
-                    adjustment only after renewal         Backup     CSM                                         invoice draft
+                    data incident within 72 hours.        Backup      DPO            confirmed breach             notification proof
+Billing             Apply annual platform fee             Owner      Finance         Renewal order approved       Approved renewal sheet +      Medium
+                    adjustment only after renewal         Backup     CSM                                          invoice draft
                     confirmation.
-                    Do not bill inactive campuses         Owner      Revenue Ops     Campus status =             ERP campus status export      High
+                    Do not bill inactive campuses         Owner      Revenue Ops     Campus status =              ERP campus status export     High
                     during suspension period.             Backup     Finance         suspended
-Support             Provide P1 response within 30         Owner      Support L2      Ticket priority = P1        Ticket timestamps + agent     High
+Support             Provide P1 response within 30         Owner       Support L2     Ticket priority = P1        Ticket timestamps + agent     High
                     minutes during school operating       Backup      Ops Manager                                assignment log
                     hours.
                     Escalate unresolved P2 tickets        Owner       Support L1     Ticket age > 4 business     Escalation log                 Medium
@@ -621,16 +621,16 @@ mixed numeric/text values.
 Parsing challenge: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around
 the table.
 
-Plan             Student Volume         Annual Platform Charges                      Usage Add-ons                        Billing Rule
-                                        India Region               International     SMS              WhatsApp
- Starter         0 - 2,000 students     Base          INR 4.5L     USD 7,200         INR 0.18/message  INR 0.42/message   Quarterly advance
-                                        Support     INR 6OK
- Growth          2,001 - 10,000 students Base         INR 11L      USD 18,000        INR 0.15/message  INR 0.38/message   50% advance +
-                                         Support      INR 1.4L                                                            monthly usage
-  Enterprise     10,001+ students        Base          Custom      Custom            Negotiated        Negotiated         Signed order form
-                                         Support      Included                                                            required
-  Exception      Government schools      Discount may apply after approval           No discount on pass-through cost     Requires CFO
-                                                                                                                          approval
+Plan             Student Volume        Annual Platform Charges                      Usage Add-ons                        Billing Rule
+                                        India Region              International     SMS              WhatsApp
+ Starter         0 - 2,000 students     Base         INR 4.5L     USD 7,200         INR 0.18/message  INR 0.42/message   Quarterly advance
+                                       Support     INR 6OK
+ Growth          2,001 - 10,000 students Base        INR 11L      USD 18,000        INR 0.15/message  INR 0.38/message   50% advance +
+                                        Support      INR 1.4L                                                            monthly usage
+  Enterprise     10,001+ students       Base          Custom      Custom            Negotiated       Negotiated          Signed order form
+                                        Support      Included                                                            required
+  Exception      Government schools     Discount may apply after approval           No discount on pass-through cost     Requires CFO
+                                                                                                                         approval
 
 
 Table 2: Added as complex parsing appendix for table extraction, OCR fallback, and layout-aware RAG testing.
@@ -649,24 +649,22 @@ Complex RAG Parsing Sample - appended complex tables    Appendix page 2
 ---
 
  Appendix C: Invoice Line Items with Tax Split
-
  Invoice-style line item table with item groups, quantity, rate, CGST/SGST split, totals, and summary row. Useful
  for invoice parsing and tax extraction tests.
 
  Parsing challenge: preserve row boundaries, nested headers, split cells, grouped labels, numeric values, and footnotes/context around
  the table.
 
-Item Group        Line Item                                     Qty          Rate              Tax Split                  Total
-                                                                                               CGST          SGST
-ERP Platform       Annual School360 Enterprise Subscription - 1              INR 11,00,000     9%            9%           INR 12,98,000
+Item Group         Line Item                                      aty           Rate              Tax Split                  Total
+                                                                                                  CGST          SGST
+ERP Platform       Annual School360 Enterprise Subscription -      1            INR 11,00,000     9%            9%            INR 12,98,000
                    12 campuses
-                   Parent communication add-on - estimated      2,00,000     INR 0.36/msg      9%            9%           INR 89,680
-                   message pack                                 msgs
-Implementation     Data migration + training + go-live support  1            InR 2,40,000      9%            9%           INR 2,83,200
-Summary            Subtotal and taxes                           *            INR 14,16,000     INR 1,27,440  INR 1,27,440 INR 16,70,880
+                   Parent communication add-on - estimated         2,00,000     INR 0.36/msg      9%           9%            InR 89,680
+                   message pack                                    msgs
+Implementation     Data migration + training + go-live support     1            INR 2,40,000      9%            9%            INR 2,83,200
+Summary            Subtotal and taxes                              *            INR 14,16,000     INR 1,27,440  INR 1,27,440  INR 16,70,880
 
-
-Table 3: Added as complex parsing appendix for table extraction, OCR fallback, and layout-aware RAG testing.
+ Table 3: Added as complex parsing appendix for table extraction, OCR fallback, and layout-aware RAG testing.
 
 
 
@@ -698,8 +696,8 @@ Contracts
 
 
 
-Scanned    Parser    Text + Tables  RAG-ready
-Invoices    + OCR    + Metadata     Chunks
+    Scanned    Parser    Text + Tables  RAG-ready
+    Invoices    + OCR    + Metadata     Chunks
 
 
 
@@ -737,7 +735,7 @@ Parsing challenge: extract chart labels, legends, values, and nearby explanatory
 Open Contract Risks by Month
                                   45
                                                               High risk: 12 c
-                                                                                      : 12 clauses
+                                                                                      <: 12 clauses
                              38
                                                               Medium risk: :
                                                                                       risk: 21 clauses
@@ -771,15 +769,15 @@ Complex RAG Parsing Sample - appended visuals and scanned documents    Appendix 
 
 ---
 
- Appendix F: Data Lineage and Access Boundary
+Appendix F: Data Lineage and Access Boundary
                                 Image
 Lineage-map style image with nodes, arrows, access boundaries, and metadata badges. Useful for diagram
 OCR and relationship extraction.
 Parsing challenge: diagram text must be OCRed and mapped to relationships such as user auth, namespace, retrieval, and
 LLM gateway.
 
- Visual Appendix 3: Data Lineage and Access Boundary
- Parsing challenge: diagram text must be OCRed and mapped to relationships.
+Visual Appendix 3: Data Lineage and Access Boundary
+Parsing challenge: diagram text must be OCRed and mapped to relationships.
 
 
 
@@ -796,7 +794,7 @@ Auth Service  Query Router  LLM Gateway
 
 
                                                     role    audit log
-Red boundary = tenant-safe processing zone. Reti            authenticated client_id
+Red boundary = tenant-safe processing zone. Reti            authenticated client id
 before LLM context creation.
 
 
@@ -841,23 +839,23 @@ GSTIN: 29AABCT2026P1Z8              Date: 18 Jul 2026
 
 Line Items
 
- #  Description                                       Qty       Rate         Amount
+ #  Description                                       Qty      Rate        Amount
 
- 1  Annual platform subscription                      1         INR 95,000   95,000
+ 1  Annual platform subscription                      1        INR 95,000  95,000
 
- 2  Implementation and onboarding                     1         INR 22,500   22,500
+ 2  Implementation and onboarding                     1        INR 22,500  22,500
 
- 3  Support add-on / message pack                     3,500     INR 0.40     1,400
+ 3  Support add-on / message pack                     3,500    INR 0.40    1,400
 
-                                                               Subtotal:     INR 118,900
-                                                               CGST 9%:      INR 10,701
-                                                               SGST 9%:      INR 10,701
+                                                             Subtotal:     INR 118,900
+                                                             CGST 9%:      INR 10,701
+                                                             SGST 9%:      INR 10,701
 
-                                                               Total Amount:INR 140,302
+                                                             Total Amount:INR 140,302
 Payment Terms:
 Due within 15 days. Late fee may apply after due date.
 Footer note: Amount includes taxes unless separately mentioned.
-halleng i samp otatd pge tabl nesd hanitpval
+hallenge i samp otatd pge tabl nesd hanitpval
 
 
 
@@ -902,15 +900,15 @@ Bengaluru, Karnataka - 560103
 
 Line Items
 
- #     Description                      Qty                     Rate             Amount
+  #     Description                      Qty                    Rate             Amount
 
- 1     Electricity fixed charges        1                       INR 1,250        1,250
+  1     Electricity fixed charges        1                      INR 1,250        1,250
 
- 2     Energy usage - peak units         842                    INR 8.20          6,904
+  2     Energy usage - peak units         842                   INR 8.20          6,904
 
- 3     Energy usage - off-peak units     313                    INR 5.70          1,784
+  3     Energy usage - off-peak units     313                   INR 5.70          1,784
 
- 4     Meter service adjustment          1                      INR 340          340
+  4     Meter service adjustment          1                     INR 340          340
 
                                                        Subtotal:             INR 10,278
                                                        CGST 9%:              INR 925
