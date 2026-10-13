@@ -40,3 +40,5 @@ pillow>=10.0
 nltk>=3.8
 ipython>=8.0
 jupyter>=1.0
+
+langgraph
